@@ -1,0 +1,14 @@
+【2018-12-14 23:57:38】
+订单号：20181214235705495352
+通知地址：http://pay.sp2018.top:81/juhe_zfb/server.php
+通知报文：memberid=10036&orderid=2018121423560320603&transaction_id=20181214235705495352&amount=5.0000&datetime=20181214235738&returncode=00&sign=C9A7F1176459877EE75FF347AF1B5D25&attach=1234|456
+HTTP状态：
+返回：<html><head><title>404</title><head><body>page not found.</body></html>
+
+【2018-12-14 23:58:01】
+订单号：20181214235705495352
+通知地址：http://pay.sp2018.top:81/juhe_zfb/server.php
+通知报文：memberid=10036&orderid=2018121423560320603&transaction_id=20181214235705495352&amount=5.0000&datetime=20181214235800&returncode=00&sign=FFA7B5DE6FE4DDF58BF8308E933D0CDB&attach=1234|456
+HTTP状态：
+返回：<html><head><title>404</title><head><body>page not found.</body></html>
+

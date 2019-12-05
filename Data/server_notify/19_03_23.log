@@ -1,0 +1,7 @@
+【2019-03-23 00:45:19】
+订单号：20190323004420525753
+通知地址：http://www.57blog.com/demo/server.php
+通知报文：memberid=10005&orderid=E2019032300441884435&transaction_id=20190323004420525753&amount=1.0000&datetime=20190323004519&returncode=00&sign=BB643BD227B4E19428AB0DA6A99D4202&attach=1234|456
+HTTP状态：
+返回：OK
+

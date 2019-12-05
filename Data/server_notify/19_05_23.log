@@ -1,0 +1,14 @@
+【2019-05-23 00:32:00】
+订单号：20190523002459989752
+通知地址：http://my.pay.com/Pay_Charges_notify.html
+通知报文：memberid=10085&orderid=C20190523002458323764&transaction_id=20190523002459989752&amount=1.0000&datetime=20190523003200&returncode=00&sign=A55F2D2F48DF6EF20A7A8F2DA88D5506&attach=
+HTTP状态：
+返回：OK
+
+【2019-05-23 00:50:43】
+订单号：20190523005032569953
+通知地址：http://my.pay.com/Pay_Charges_notify.html
+通知报文：memberid=10085&orderid=C20190523005032542611&transaction_id=20190523005032569953&amount=2.0000&datetime=20190523005043&returncode=00&sign=FA6E80A826D70831D1FDFF2CE8E167D6&attach=
+HTTP状态：
+返回：OK
+

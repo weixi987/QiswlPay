@@ -1,0 +1,7 @@
+【2019-04-21 16:23:49】
+订单号：20190417155832565497
+通知地址：http://www.cfepay.net/Pay_Test_notify.html
+通知报文：memberid=10004&orderid=CS20190417155104293711&transaction_id=20190417155832565497&amount=1.0000&datetime=20190421162349&returncode=00&sign=1236EAEA84FFCE73969231788810B9BF&attach=
+HTTP状态：
+返回：ok
+

@@ -1,0 +1,14 @@
+【2019-04-23 00:08:12】
+订单号：20190421194323981011
+通知地址：http://my.pay.com/Pay_Charges_notify.html
+通知报文：memberid=10005&orderid=C20190421194316108129&transaction_id=20190421194323981011&amount=1.0000&datetime=20190423000812&returncode=00&sign=C6C4B021EB1DF266FA0D3B1FF4B46BEA&attach=
+HTTP状态：
+返回：OK
+
+【2019-04-23 18:52:01】
+订单号：20190423184137494849
+通知地址：http://my.pay.com/Pay_Test_notify.html
+通知报文：memberid=10101&orderid=CS20190423184134176080&transaction_id=20190423184137494849&amount=11.0000&datetime=20190423185201&returncode=00&sign=D1704F1C3343E2F4379BFD863CACFA20&attach=
+HTTP状态：
+返回：ok
+

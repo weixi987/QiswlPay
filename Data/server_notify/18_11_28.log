@@ -1,0 +1,14 @@
+【2018-11-28 00:06:08】
+订单号：20181128000553494951
+通知地址：http://www.zhkpay.com/demo/server.php
+通知报文：memberid=10005&orderid=E2018112800054876579&transaction_id=20181128000553494951&amount=0.0100&datetime=20181128000608&returncode=00&sign=FD058B7D287A81B6EB917C4201FE0F83&attach=1234|456
+HTTP状态：
+返回：OK
+
+【2018-11-28 20:46:20】
+订单号：20181128204603985598
+通知地址：http://www.zhkpay.com/demo/server.php
+通知报文：memberid=10005&orderid=E2018112820460159910&transaction_id=20181128204603985598&amount=0.0100&datetime=20181128204619&returncode=00&sign=9CD87600C52C9EDDEE722A5824103E38&attach=1234|456
+HTTP状态：
+返回：OK
+

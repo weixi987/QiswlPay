@@ -1,0 +1,35 @@
+【2018-12-26 15:59:28】
+订单号：20181226153939981005
+通知地址：https://www.zhkpay.com/demo/server.php
+通知报文：memberid=10005&orderid=E2018122615393396831&transaction_id=20181226153939981005&amount=1.0000&datetime=20181226155928&returncode=00&sign=7592EB8946A1782A8FF44EF5DE32D1E7&attach=1234|456
+HTTP状态：
+返回：OK
+
+【2018-12-26 16:03:48】
+订单号：20181226153939981005
+通知地址：https://www.zhkpay.com/demo/server.php
+通知报文：memberid=10005&orderid=E2018122615393396831&transaction_id=20181226153939981005&amount=1.0000&datetime=20181226160347&returncode=00&sign=461937CDCFA59C8B56DA6430A2A59F7A&attach=1234|456
+HTTP状态：
+返回：OK
+
+【2018-12-26 16:11:02】
+订单号：20181226161033575410
+通知地址：https://www.zhkpay.com/demo/server.php
+通知报文：memberid=10005&orderid=E2018122616102955949&transaction_id=20181226161033575410&amount=1.0000&datetime=20181226161102&returncode=00&sign=4B65E7F37A1D3C26A6E81E18A9BDBFED&attach=1234|456
+HTTP状态：
+返回：OK
+
+【2018-12-26 16:15:39】
+订单号：20181226161522979756
+通知地址：https://www.zhkpay.com/demo/server.php
+通知报文：memberid=10005&orderid=E2018122616151981712&transaction_id=20181226161522979756&amount=1.0000&datetime=20181226161539&returncode=00&sign=C0612FA00963A5B639C372E36090E8A7&attach=1234|456
+HTTP状态：
+返回：OK
+
+【2018-12-26 18:37:15】
+订单号：20181226183612995598
+通知地址：https://www.zhkpay.com/demo/server.php
+通知报文：memberid=10005&orderid=E2018122618361111735&transaction_id=20181226183612995598&amount=1.0000&datetime=20181226183715&returncode=00&sign=B2DC882842C794BB77B96CAC93A3C468&attach=1234|456
+HTTP状态：
+返回：OK
+
