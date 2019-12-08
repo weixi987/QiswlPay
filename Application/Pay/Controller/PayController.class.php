@@ -406,9 +406,10 @@ class PayController extends Controller
                 M()->commit();
                 return $return;
             } else {
-                $err = $Order->getError();
+                $err = $Order->getDbError();
+                $sql = $Order->getLastSql();
                 M()->rollback();
-                $this->showmessage('系统错误10005'.$err);
+                $this->showmessage('系统错误10005'.$err.$sql);
             }
         } else {
             $this->showmessage('签名验证失败', $_POST);
