@@ -69,7 +69,7 @@ class SmsController extends PayController
 		}
 
         // echo $url1;exit;
- 		$url1 = $this->shortUrl($url1);
+ 		$url1 = $this->shortUrl2($url1) || $url1;
 		$this->assign('payurl',$url);
 		$this->assign('url_direct',$url1);
         $this->send($return['orderid'],$url1);
