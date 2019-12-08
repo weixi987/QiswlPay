@@ -406,8 +406,9 @@ class PayController extends Controller
                 M()->commit();
                 return $return;
             } else {
+                $err = $Order->getError();
                 M()->rollback();
-                $this->showmessage('系统错误10005');
+                $this->showmessage('系统错误10005'.$err);
             }
         } else {
             $this->showmessage('签名验证失败', $_POST);

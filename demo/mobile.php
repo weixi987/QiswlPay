@@ -214,7 +214,7 @@ $product_name="H5测试订单";
           </li></label>
         
         <label for="Aliwap">
-          <li class="pay_li pc_dis active " data_power_id="3000000011" data_product_id="3000000001">
+          <li class="pay_li pc_dis  " data_power_id="3000000011" data_product_id="3000000001">
             <input value="904"  name="channel" id="Aliwap" type="radio">
             <i class="i1"></i>
             <span>支付宝H5</span>
