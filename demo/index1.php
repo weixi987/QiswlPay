@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 header("Content-type: text/html; charset=utf-8");
-$pay_memberid = "10005";//商户ID
+$pay_memberid = "10084";//商户ID
 $pay_orderid = $_POST["orderid"];    //订单号
 $pay_amount =  $_POST["amount"];    //交易金额
 $pay_bankcode = $_POST["channel"];   //银行编码
@@ -12,7 +12,7 @@ $pay_applydate = date("Y-m-d H:i:s");  //订单时间
 $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://'; 
 $pay_notifyurl = $http_type . $_SERVER['HTTP_HOST'] . "/demo/server.php";   //服务端返回地址
 $pay_callbackurl = $http_type. $_SERVER['HTTP_HOST'] . "/demo/page.php";  //页面跳转返回地址
-$Md5key = "ud7xh8rc24c6c7jm0l3cxdmcyewi84a2";   //密钥 
+$Md5key = "bu2szq9byioxc1undh0kpuan6gxdtbwa";   //密钥 
 $tjurl = $http_type . $_SERVER['HTTP_HOST'] . "/Pay_Index.html";   //提交地址
 
 
