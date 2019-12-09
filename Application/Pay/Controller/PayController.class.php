@@ -97,7 +97,7 @@ class PayController extends Controller
                 }
             }
             if (empty($channel_account_item)) {
-                $this->showmessage('账户:' . $error_msg);
+                $this->showmessage('账户:' . $error_msg.'(100011)');
             }
             //var_dump($channel_account_list);exit;
         }else{
@@ -203,7 +203,7 @@ class PayController extends Controller
                         $return=$this->addQdOrder($parameter);
                         return $return;
                     }else{
-                       $this->showmessage('账户:' . $error_msg); 
+                       $this->showmessage('账户:' . $error_msg.'(100011)'); 
                     }
                     // $this->showmessage('账户:' . $error_msg);
                 }
