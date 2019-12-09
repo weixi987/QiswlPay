@@ -235,7 +235,8 @@ class FxSmsController extends PayController
     			$amount = strstr(substr(strstr($content,'金额'),6),'元，余额',true);
     			break;
     		case 'ICBC':
-    			$amount = strstr(substr(strstr($content,')'),1),'元，余额',true);
+    			//$amount = strstr(substr(strstr($content,')'),1),'元，余额',true);
+    			$amount = strstr(substr(strstr($content,')'),1),'元。',true);
     			break;
     		case 'CMB':
     			$amount = strstr(substr(strstr($content,'人民币'),9),'元',true);
