@@ -441,7 +441,7 @@ class ChannelController extends BaseController
                 //添加
                 $res = M('channel_account')->add($_request);
             }
-            $this->ajaxReturn(['status' => $res]);
+            $this->ajaxReturn(['status' => $res,'msg'=>M()->getDbError()]);
         }
     }
 
