@@ -45,7 +45,7 @@ $myKey=$return['signkey'];
  
  
  
- $apiurl = 'http://pdd.heropay.net/index/api/order'; // API下单地址
+ $apiurl = 'http://pdd2.heropay.net/index/api/order'; // API下单地址
 $signkey = $myKey; // 商户KEY  PDD平台获取
 $data = array(
     'type' => 'wechat', // 通道代码 alipay/wechat
@@ -61,7 +61,7 @@ $data = array(
 //var_dump($data);
 
  
-    $url =  'http://pdd.heropay.net/index/api/order';
+    $url =  'http://pdd2.heropay.net/index/api/order';
         file_put_contents('Data/pddWxPay.txt', "zf【" . date('Y-m-d H:i:s') . "】提交1结果：" . var_export($data,true) . "\r\n\r\n", FILE_APPEND);
         $r = $this->curlPost($apiurl,$data);
         $res = json_decode($r,true);
