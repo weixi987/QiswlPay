@@ -60,6 +60,7 @@ class MowoolController extends PayController
         $out_uid = '';
 
         $data = [
+            'return_type'  => 'app',
             'appid'        => $return['mch_id']?:$this->appid,
             'pay_type'     => $pay_type,
             'out_trade_no' => $out_trade_no,
