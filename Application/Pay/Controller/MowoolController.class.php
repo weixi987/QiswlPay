@@ -53,9 +53,9 @@ class MowoolController extends PayController
         //支付成功后自动跳转url
         $success_url = $callbackurl;
         //支付失败或者超时后跳转url
-        $error_url = $this->_site . 'Pay_Mowool_callbackurl.html';
+        $error_url = '';//$this->_site . 'Pay_Mowool_callbackurl.html';
         //版本号
-        $version = 'v1.1';
+        $version = 'v2.0';
         //用户网站的请求支付用户信息，可以是帐号也可以是数据库的ID:858887906
         $out_uid = '';
 
