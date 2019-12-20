@@ -202,19 +202,29 @@ class MowoolController extends PayController
             'out_uid'      => $out_uid,
             'sign'      => $sign,
         ];
+        file_put_contents('Data/Mowool.txt', "Mowool【" . date('Y-m-d H:i:s') . "】notifyurl提交1结果：" . var_export($_POST,true) . "\r\n\r\n", FILE_APPEND);
 
         $order = M('Order')
             ->where(['pay_orderid' => preg_replace('/(\W+)/', '', $out_trade_no)])
             ->find();
 
+            file_put_contents('Data/Mowool.txt', "Mowool【" . date('Y-m-d H:i:s') . "】notifyurl提交2结果：" . var_export($order,true) . "\r\n\r\n", FILE_APPEND);
+
+
         if(!$order)exit('error:oor');
 
         //第一步，检测商户appid否一致
-        if ($appid != $order['memberid']?:$this->appid) exit('error:appid');
-        //第二步，验证签名是否一致
-        if ($this->verifySign($data,$order['key']?:$this->app_key) != $sign) exit('error:sign');
+        if ($appid != $order['memberid']?:$this->appid){
+            file_put_contents('Data/Mowool.txt', "Mowool【" . date('Y-m-d H:i:s') . "】notifyurl提交3结果：post_appid:$appid-" . $order['memberid']. "\r\n\r\n", FILE_APPEND);
+             exit('error:appid');
 
-        file_put_contents('Data/YhPay.txt', "Mowool【" . date('Y-m-d H:i:s') . "】notifyurl提交1结果：" . var_export($_POST,true) . "\r\n\r\n", FILE_APPEND);
+        }
+        //第二步，验证签名是否一致
+        if ($this->verifySign($data,$order['key']?:$this->app_key) != $sign){
+            file_put_contents('Data/Mowool.txt', "Mowool【" . date('Y-m-d H:i:s') . "】notifyurl提交4结果：order_key:" . $order['key']. "\r\n\r\n", FILE_APPEND);
+            exit('error:sign');
+        }
+        
         
             $this->EditMoney($data['out_trade_no'], 'Mowool', 0);
             exit("success");
