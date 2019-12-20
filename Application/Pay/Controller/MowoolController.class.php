@@ -214,7 +214,7 @@ class MowoolController extends PayController
         if(!$order)exit('error:oor');
 
         //第一步，检测商户appid否一致
-        if ($appid != $order['memberid']?:$this->appid){
+        if ($appid != ($order['memberid']?:$this->appid)){
             file_put_contents('Data/Mowool.txt', "Mowool【" . date('Y-m-d H:i:s') . "】notifyurl提交3结果：post_appid:$appid-" . $order['memberid']. "\r\n\r\n", FILE_APPEND);
              exit('error:appid');
 
