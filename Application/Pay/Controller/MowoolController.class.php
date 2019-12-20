@@ -6,7 +6,8 @@ namespace Pay\Controller;
 
 class MowoolController extends PayController
 {
-    
+
+   
     //商户appid->到平台首页自行复制粘贴
     private $appid = '1071185';
 
@@ -59,7 +60,7 @@ class MowoolController extends PayController
         $out_uid = '';
 
         $data = [
-            'appid'        => $this->appid,
+            'appid'        => $return['mch_id']?:$this->appid,
             'pay_type'     => $pay_type,
             'out_trade_no' => $out_trade_no,
             'amount'       => $amount,
@@ -71,7 +72,7 @@ class MowoolController extends PayController
         ];
 
         //拿APPKEY与请求参数进行签名
-        $sign = $this->getSign($this->app_key, $data);
+        $sign = $this->getSign($return['signkey']?:$this->app_key, $data);
         $data['sign'] = $sign;
 
         $this->assign('form',$data);
@@ -201,10 +202,16 @@ class MowoolController extends PayController
             'sign'      => $sign,
         ];
 
+        $order = M('Order')
+            ->where(['pay_orderid' => preg_replace('/(\W+)/', '', $out_trade_no)])
+            ->find();
+
+        if(!$order)exit('error:oor');
+
         //第一步，检测商户appid否一致
-        if ($appid != $$this->appid) exit('error:appid');
+        if ($appid != $order['memberid']?:$this->appid) exit('error:appid');
         //第二步，验证签名是否一致
-        if ($this->verifySign($data,$this->app_key) != $sign) exit('error:sign');
+        if ($this->verifySign($data,$order['key']?:$this->app_key) != $sign) exit('error:sign');
 
         file_put_contents('Data/YhPay.txt', "Mowool【" . date('Y-m-d H:i:s') . "】notifyurl提交1结果：" . var_export($_POST,true) . "\r\n\r\n", FILE_APPEND);
         
