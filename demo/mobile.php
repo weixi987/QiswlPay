@@ -213,7 +213,7 @@ $product_name="H5测试订单";
             <span>支付宝固码(Mowool)</span>
           </li></label>
         <label for="Bankpay">
-          <li class="pay_li pc_dis active " data_power_id="3000000011" data_product_id="3000000001">
+          <li class="pay_li pc_dis  " data_power_id="3000000011" data_product_id="3000000001">
             <input value="922" name="channel" id="Bankpay" type="radio">
             <i class="i1"></i>
             <span>支付宝转卡</span>
