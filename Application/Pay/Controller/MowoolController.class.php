@@ -213,9 +213,16 @@ class MowoolController extends PayController
 
         if(!$order)exit('error:oor');
 
+        //检查金额
+        if ($order['pay_amount'] != $data['amount_true']){
+            file_put_contents('Data/Mowool.txt', "Mowool【" . date('Y-m-d H:i:s') . "】：error:amount:{$order['pay_amount']}-{$data['amount_true']}\r\n\r\n", FILE_APPEND);
+             exit('error:amount');
+
+        }
+
         //第一步，检测商户appid否一致
         if ($appid != ($order['memberid']?:$this->appid)){
-            file_put_contents('Data/Mowool.txt', "Mowool【" . date('Y-m-d H:i:s') . "】notifyurl提交3结果：post_appid:$appid-" . $order['memberid']. "\r\n\r\n", FILE_APPEND);
+            file_put_contents('Data/Mowool.txt', "Mowool【" . date('Y-m-d H:i:s') . "】notifyurl提交3结果：error:appid:$appid-" . $order['memberid']. "\r\n\r\n", FILE_APPEND);
              exit('error:appid');
 
         }
