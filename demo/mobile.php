@@ -219,6 +219,13 @@ $product_name="H5测试订单";
             <span>支付宝转卡</span>
           </li></label>
           
+          <label for="pddwx2">
+          <li class="pay_li pc_dis  " data_power_id="3000000011" data_product_id="3000000001">
+            <input value="928"  name="channel" id="pddwx2" type="radio">
+            <i class="i1"></i>
+            <span>pdd微信2</span>
+          </li></label>
+
           <label for="pddwx">
           <li class="pay_li pc_dis  " data_power_id="3000000011" data_product_id="3000000001">
             <input value="926"  name="channel" id="pddwx" type="radio">
