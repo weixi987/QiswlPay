@@ -47,7 +47,7 @@ class MowoolController extends PayController
         //支付类型alipay、wechat
         $pay_type = $return['gateway'];
         //支付金额
-        $amount = sprintf("%.2f",number_format($return['amount'],2));
+        $amount = sprintf("%.2f",$return['amount']);
         //异步通知接口url->用作于接收成功支付后回调请求
         $callback_url = $notifyurl;
         //支付成功后自动跳转url
