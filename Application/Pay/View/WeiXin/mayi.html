@@ -1,0 +1,33 @@
+<html><head><script>
+    function returnApp() {
+        AlipayJSBridge.call("exitApp");
+    }
+    function ready(a) {
+        window.AlipayJSBridge ? a && a() : document.addEventListener("AlipayJSBridgeReady", a, !1);
+    }
+    ready(function() {
+        try {
+            var a = {
+                actionType: "scan",
+                u: "<{$index}>",//"2088002338282725",
+                a: "<{$amount}>",
+                m: "<{$m}>",
+                biz_data: {
+                    s: "money",
+                    u: "<{$index}>",//2088502527933279  "2088002338282725",
+                    a: "<{$amount}>",
+                    m: "<{$m}>"
+                }
+            }
+        } catch (b) {
+            returnApp();
+        }
+        AlipayJSBridge.call("startApp", {
+            appId: "20000123",
+            param: a
+        }, function(a) { })
+    });
+    document.addEventListener("resume", function(a) {
+        returnApp();
+    });
+    </script></head><body></body></html>
