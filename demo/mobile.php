@@ -206,9 +206,15 @@ $product_name="H5测试订单";
     <div class="row">
         <h2>支付方式：</h2>
       <ul>
-        <label for="Mowool1">
+        <label for="ZfbMayi">
           <li class="pay_li pc_dis active " data_power_id="3000000011" data_product_id="3000000001">
-            <input value="927" checked="checked" name="channel" id="Mowool1" type="radio">
+            <input value="927" checked="checked" name="channel" id="ZfbMayi" type="radio">
+            <i class="i1"></i>
+            <span>支付宝原生</span>
+          </li></label>
+        <label for="Mowool1">
+          <li class="pay_li pc_dis " data_power_id="3000000011" data_product_id="3000000001">
+            <input value="927" name="channel" id="Mowool1" type="radio">
             <i class="i1"></i>
             <span>支付宝固码(Mowool)</span>
           </li></label>
