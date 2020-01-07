@@ -33,7 +33,7 @@ class MoneyCheck {
         $redisKey = md5($id."_".$amount);
         $keyValueJson = $this->redis->exists($redisKey);
         if(!$keyValueJson){
-            $result = $this->redis->set($redisKey,'y',299);
+            $result = $this->redis->set($redisKey,'y',300);
             return  $result;
         }
         else{

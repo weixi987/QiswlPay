@@ -186,83 +186,9 @@ class ZfbMayiController extends PayController
 
     public function checkCard($content=null)
     {  
-    	$bankType = [
-    		'EMS'  => '邮储银行',
-    		'ABC'  => '中国农业银行',
-    		'CCB'  => '建设银行',
-    		'CEB'  => '光大银行',
-    		'ICBC' => '工商银行',
-    		'CMB'  => '招商银行',
-    		'CMBC' => '民生银行',
-            'PingAn'=>'平安银行',
-    		'BOC'=>'中国银行',
-            'CIB'=>'兴业银行',
-            'COMM'=>'交通银行',
-            'HXBANK'=>'华夏银行',
-            'SPDB'=>'浦发银行',
-            'MTBANK'=>'民泰银行',
-            'EGBANK'=>'恒丰银行'
-    	];
-    	$check = '';
-    	foreach($bankType as $k => $v){
-    	   if(strpos($content,$v)) {
-    	     $check =  $k;
-    	     break;
-    	   }
-    	}
-    	$amount = '';
-    	switch($check){
-    		case 'CEB':
-    			$amount =  strstr(substr(strstr($content,'存入'),6),'元，余额',true);
-    			break;
-    		case 'ABC':
-    			$amount = strstr(substr(strstr($content,'交易人民币'),15),'，余额',true);
-    			break;
-    		case 'CCB':
-    			$amount = substr(strstr($content,'收入人民币'),15,strpos(strstr($content,'收入人民币'),'元,活')-15);
-    			break;
-    		case 'EMS':
-    			$amount = strstr(substr(strstr($content,'金额'),6),'元，余额',true);
-    			break;
-    		case 'ICBC':
-    			//$amount = strstr(substr(strstr($content,')'),1),'元，余额',true);
-    			$amount = strstr(substr(strstr($content,')'),1),'元。',true);
-    			break;
-    		case 'CMB':
-    			$amount = strstr(substr(strstr($content,'人民币'),9),'元',true);
-    			break;
-    		case 'CMBC':
-    		    $amount = strstr(substr(strstr($content,'￥'),3),'元，',true);
-    		    break;
-    		case 'PingAn':
-    			$amount = strstr(substr(strstr($content,'入人民币'),12),'元',true);
-    			break;
-            case 'BOC':
-                $amount = strstr(substr(strstr($content,'入人民币'),12),'元',true);
-                break;
-            case 'CIB':
-                $amount = strstr(substr(strstr($content,'付款收入'),12),'元',true);
-                break;
-            case 'COMM':
-                $amount = strstr(substr(strstr($content,'网银转入'),12),'元',true);
-                break;
-            case 'HXBANK':
-                $amount = strstr(substr(strstr($content,'账人民币'),12),'元',true);
-                break;
-            case 'SPDB':
-                $amount = strstr(substr(strstr($content,'存入'),6),'[',true);
-                break;
-            case 'MTBANK':
-                $amount = strstr(substr(strstr($content,'转入'),6),'元',true);
-                break;
-            case 'EGBANK':
-                $amount = strstr(substr(strstr($content,'账户转入'),12),'元',true);
-                break;
-    		default :
-    			file_put_contents('./Data/ZfbMayiFail.txt',$content.PHP_EOL,FILE_APPEND);
-
-    	}
-
+    	
+        $amount = strstr(substr(strstr($content,'向你付款'),12),'元',true);
+           
     	return $amount;
     	
     }
