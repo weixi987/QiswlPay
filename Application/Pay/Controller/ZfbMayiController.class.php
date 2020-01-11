@@ -50,7 +50,10 @@ class ZfbMayiController extends PayController
         
         $codeurl="https://d.alipay.com/i/index.htm?iframeSrc=".urlencode($ppurl);
         $codeurl=str_replace("%2A%2A%2A%2A","****",$codeurl); 
-        $payurl = U('ZfbMayi/detail',array('id'=>$return['orderid']),true,true);
+
+        $unlockdomain = trim($return['unlockdomain']);
+        $host = $unlockdomain?'@'.$unlockdomain:'';
+        $payurl = U('ZfbMayi/detail'.$host,array('id'=>$return['orderid']),true,true);
         $newurl2="alipays://platformapi/startapp?appId=60000029&showLoading=YES&url=".urlencode($payurl);
         $this->assign('payurl',$newurl2);
         $this->assign('orderlasttime',300);
