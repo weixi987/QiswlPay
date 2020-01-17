@@ -149,7 +149,7 @@
 	    input.select();
 	    input.setSelectionRange(0, input.value.length), document.execCommand('Copy');
 	    document.body.removeChild(input);
-	    layer.msg("金额复制成功,正在跳转支付！");
+	    alert("金额复制成功,正在跳转支付！");
         window.location.href = '<{$appid}>';
 	}
 </script>
