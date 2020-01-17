@@ -102,8 +102,8 @@
                 <div> <p style="font-size:1.2rem;color:#f00;text-align:center;">如果上面的支付方式没有成功，可以尝试下面的支付方式2：</p>
                   </div>
                 <div class="tps_btn" style="padding-top: 10px;text-align: center;margin:0 atuo；width:41%;">
-                  <a href="<{$appid}>" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;">立即支付</a>
-                  <p style="font-size:1.2rem;text-align:center;">跳转后输入金额：<{$money}> ，不得更改！！！</p>
+                  <a href="javascript:copy('<{$money}>');" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;">支付方式2</a>
+                  <p style="font-size:1.2rem;text-align:center;">不得更改金额，否则无法到账！！！</p>
                               </div> 
             </div>
             </notempty>
@@ -141,6 +141,17 @@
       }
       
     }); 
+
+    function copy(message) {
+	    var input = document.createElement("input");
+	    input.value = message;
+	    document.body.appendChild(input);
+	    input.select();
+	    input.setSelectionRange(0, input.value.length), document.execCommand('Copy');
+	    document.body.removeChild(input);
+	    layer.msg("金额复制成功,正在跳转支付！");
+        window.location.href = '<{$appid}>';
+	}
 </script>
 </body>
 </html>
