@@ -96,6 +96,17 @@
             <p style="font-size:1.2rem;text-align:center;">支付后3分钟内自动到账</p></div>
 
             </div>
+            <notempty name="appid">
+            <div class="am-u-md-8 am-u-sm-12 am-u-sm-centered am-margin-vertical am-text-center">
+            <div style="width: 100%;height: 80px;"></div>
+                <div> <p style="font-size:1.2rem;color:#f00;text-align:center;">如果上面的支付方式没有成功，可以尝试下面的支付方式2：</p>
+                  </div>
+                <div class="tps_btn" style="padding-top: 10px;text-align: center;margin:0 atuo；width:41%;">
+                  <a href="<{$appid}>" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;">立即支付</a>
+                  <p style="font-size:1.2rem;text-align:center;">跳转后输入金额：<{$money}> ，不得更改！！！</p>
+                              </div> 
+            </div>
+            </notempty>
     <!--在这里编写你的代码-->
     <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="/Public/Front/js/jquery.min.js"></script>
