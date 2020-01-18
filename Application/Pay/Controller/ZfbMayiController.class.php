@@ -200,8 +200,8 @@ class ZfbMayiController extends PayController
 
     public function checkCard($content=null)
     {  
-    	
-        $amount = strstr(substr(strstr($content,'向你付款'),12),'元',true);
+        
+        $amount = strstr(substr(strstr($content,'款'),3),'元',true);
            
     	return $amount;
     	
