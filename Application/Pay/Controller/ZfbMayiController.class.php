@@ -67,6 +67,13 @@ class ZfbMayiController extends PayController
         //https://render.alipay.com/p/s/i?scheme=alipays://platformapi/startapp?saId=10000007&qrcode=%68%74%74%70%73%3A%2F%2F%71%72%2E%61%6C%69%70%61%79%2E%63%6F%6D%2F%66%6B%78%31%36%37%34%35%79%77%6B%6E%63%67%69%64%79%77%65%75%63%39%62%3F%5F%73%3D%77%65%62%2D%6F%74%68%65%72
         $url = "alipays://platformapi/startapp?appId=60000002&url=".urlencode($payurl);
         $this->assign("url",$url);
+
+
+        import("Vendor.phpqrcode.phpqrcode", '', ".php");
+        $QR = "Uploads/codepay/" . $return["orderid"] . ".png"; //已经生成的原始二维码图
+        \QRcode::png($bankMark, $QR, "L", 20);
+        $this->assign("imgurl", $this->_site . $QR);
+
         if($this->isMobile2()){
             $this->display("WeiXin/mayijump");
         }else{

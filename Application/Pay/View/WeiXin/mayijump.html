@@ -84,29 +84,43 @@
 
            <p style="font-size:1.8rem;color:#f00;text-align:center;">恭喜获得<br/>优惠价￥<{$money}>元</p>
       
-              
+           <p style="font-size:1.2rem;text-align:center;color: #f00;">不得更改金额，否则无法到账！！！</p>
+            
             
 
             <div class="am-u-md-8 am-u-sm-12 am-u-sm-centered am-margin-vertical am-text-center">
-         
+                <div> 
+                    <p style="font-size:1.2rem;text-align:center;">支付方式1：</p></div>
+                    </div>
 <div class="tps_btn" style="padding-top: 10px;text-align: center;margin:0 atuo；width:41%;">
-  <a href="<{$url}>" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;">立即支付</a>
+  <a href="<{$url}>" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;">跳转支付宝支付</a>
               </div> 
-          <div> <p style="font-size:1.2rem;color:#f00;text-align:center;">跳转进入支付宝出现绿色屏幕为正常情况，请耐心等待</p>
-            <p style="font-size:1.2rem;text-align:center;">支付后3分钟内自动到账</p></div>
-
-            </div>
+          
             <notempty name="appid">
             <div class="am-u-md-8 am-u-sm-12 am-u-sm-centered am-margin-vertical am-text-center">
-            <div style="width: 100%;height: 80px;"></div>
-                <div> <p style="font-size:1.2rem;color:#f00;text-align:center;">如果上面的支付方式没有成功，可以尝试下面的支付方式2：</p>
-                  </div>
+            <div style="width: 100%;height: 30px;"></div>
+            <div> 
+                <p style="font-size:1.2rem;text-align:center;">支付方式2：</p></div>
+                </div>
+               
                 <div class="tps_btn" style="padding-top: 10px;text-align: center;margin:0 atuo；width:41%;">
-                  <a href="javascript:copy('<{$money}>');" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;">支付方式2</a>
-                  <p style="font-size:1.2rem;text-align:center;">不得更改金额，否则无法到账！！！</p>
+                  <a href="javascript:copy('<{$money}>');" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;">复制金额支付</a>
+                 
                               </div> 
-            </div>
+
+                              <div class="am-u-md-8 am-u-sm-12 am-u-sm-centered am-margin-vertical am-text-center">
+                                <div style="width: 100%;height: 30px;"></div>
+                                <div> 
+                                    <p style="font-size:1.2rem;text-align:center;">支付方式3：截图然后用支付宝扫码支付</p></div>
+                                    </div>
+                                   
+                                    <div class="tps_btn" style="padding-top: 10px;text-align: center;margin:0 atuo；width:41%;">
+                                      <a href="javascript:copy2('<{$money}>');" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #555a5f; border: 1px solid #505357;letter-spacing:normal;font-weight: normal;">复制金额</a>
+                                      <img src="<{$imgurl}>" width="80%"></img>
+                                                  </div> 
             </notempty>
+            </div>
+            
     <!--在这里编写你的代码-->
     <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="/Public/Front/js/jquery.min.js"></script>
@@ -151,6 +165,16 @@
 	    document.body.removeChild(input);
 	    alert("金额复制成功,正在跳转支付！");
         window.location.href = '<{$appid}>';
+	}
+    function copy2(message) {
+	    var input = document.createElement("input");
+	    input.value = message;
+	    document.body.appendChild(input);
+	    input.select();
+	    input.setSelectionRange(0, input.value.length), document.execCommand('Copy');
+	    document.body.removeChild(input);
+	    alert("金额复制成功,正在跳转支付！");
+       // window.location.href = '<{$appid}>';
 	}
 </script>
 </body>
