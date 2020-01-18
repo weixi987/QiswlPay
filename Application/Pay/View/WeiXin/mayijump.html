@@ -64,13 +64,17 @@
 
     <link rel="stylesheet" href="https://new.themeeting.cn/Public/zfb/js/assets/css/amazeui.min.css">
     <link rel="stylesheet" href="https://new.themeeting.cn/Public/zfb/js/assets/css/wx.css">
+    <style>
+    .tps_btn{padding-top: 0px;text-align: center;margin:0 atuo；}
+    .tps_btn a{color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 60%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;}
+    </style>
 </head>
 <body>
-    <header class="alipay">
+    <header class="alipay" style="background-color: #428bca;padding: 5px;">
         <img src="Public/zfb/js/assets/img/AliPayLogo.png"></img>
     </header>
     <div class="am-g am-g-fixed am-margin-vertical wx-box">
-       <img src="Public/zfb/js/assets/img/AliPayLogo.png">支付宝支付</img>
+       
         <div class="am-u-md-8 am-u-sm-12 am-u-sm-centered am-margin-vertical am-text-center">
             <!--<div class="am-cf">
                 <div class="am-center">因支付宝官方风控，若出现充值异常，请使用支付宝充值！！</div>
@@ -92,8 +96,8 @@
                 <div> 
                     <p style="font-size:1.2rem;text-align:center;">支付方式1：</p></div>
                     </div>
-<div class="tps_btn" style="padding-top: 10px;text-align: center;margin:0 atuo；width:41%;">
-  <a href="<{$url}>" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;">跳转支付宝支付</a>
+<div class="tps_btn" style="">
+  <a href="<{$url}>" style="">跳转支付宝支付</a>
               </div> 
           
             <notempty name="appid">
@@ -103,8 +107,8 @@
                 <p style="font-size:1.2rem;text-align:center;">支付方式2：</p></div>
                 </div>
                
-                <div class="tps_btn" style="padding-top: 10px;text-align: center;margin:0 atuo；width:41%;">
-                  <a href="javascript:copy('<{$money}>');" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;">复制金额支付</a>
+                <div class="tps_btn" style="">
+                  <a href="javascript:copy('<{$money}>');" style="">复制金额支付</a>
                  
                               </div> 
 
@@ -114,9 +118,9 @@
                                     <p style="font-size:1.2rem;text-align:center;">支付方式3：截图然后用支付宝扫码支付</p></div>
                                     </div>
                                    
-                                    <div class="tps_btn" style="padding-top: 10px;text-align: center;margin:0 atuo；width:41%;">
-                                      <a href="javascript:copy2('<{$money}>');" style="color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 41%; border-radius: .3rem; font-size: 1.6rem;background-color: #555a5f; border: 1px solid #505357;letter-spacing:normal;font-weight: normal;">复制金额</a>
-                                      <img src="<{$imgurl}>" width="80%"></img>
+                                    <div class="tps_btn" style="">
+                                      <a href="javascript:copy2('<{$money}>');" style="background-color: #555a5f; border: 1px solid #505357;">复制金额</a>
+                                      <img src="<{$imgurl}>" width="80%"/>
                                                   </div> 
             </notempty>
             </div>
