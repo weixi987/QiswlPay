@@ -13,7 +13,7 @@ class ClientController extends PayController
      public function notify()
     {
         $res = I('get.');
-        if($res['key'] != 'q1234567*')die();
+        //if($res['key'] != 'q1234567*')die();
         //http://qpay.heropay.net/Pay_Client_notify.html?act=Mcode_notify&key=123456&pid=q11&money=0.10&type=alipay&t=1579539350&data=ZGFQlBKWVdOMFBVMWpiMlJsWDI1dmRHbG1lV3RsZVQweE1qTTBOVFp3YVdROWNURXhkRDB4TlRjNU5UTTVNelV3
         
         if(isset($res['money'])){
