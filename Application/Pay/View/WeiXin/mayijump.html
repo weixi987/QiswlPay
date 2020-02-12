@@ -66,10 +66,10 @@
     <link rel="stylesheet" href="https://new.themeeting.cn/Public/zfb/js/assets/css/wx.css">
     <style>
     .tps_btn{padding-top: 0px;text-align: center;margin:0 atuo；}
-    .tps_btn a{color: #fff;text-decoration: none; text-align: center;margin:0 atuo; display: inline-block; width: 60%; border-radius: .3rem; font-size: 1.6rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;}
+    .tps_btn a{color: #fff;text-decoration: none; text-align: center;padding: 5px;margin:0 atuo; display: inline-block; width: 60%; border-radius: .3rem; font-size: 1.2rem;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal;}
     </style>
 </head>
-<body>
+<body style='font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;'>
     <header class="alipay" style="background-color: #428bca;padding: 5px;">
         <img src="Public/zfb/js/assets/img/AliPayLogo.png"></img>
     </header>
@@ -86,15 +86,14 @@
             <hr>-->
             </div>
 
-           <p style="font-size:1.8rem;color:#f00;text-align:center;">恭喜获得<br/>优惠价￥<{$money}>元</p>
+           <p style="font-size:1.6rem;color:#f00;text-align:center;">恭喜获得<br/>优惠价￥<{$money}>元</p>
       
-           <p style="font-size:1.2rem;text-align:center;color: #f00;">不得更改金额，否则无法到账！！！</p>
+           <p style="font-size:1.0rem;text-align:center;color: #f00;">不得更改金额，否则无法到账！！！</p>
             
             
 
             <div class="am-u-md-8 am-u-sm-12 am-u-sm-centered am-margin-vertical am-text-center">
-                <div> 
-                    <p style="font-size:1.2rem;text-align:center;">支付方式1：</p></div>
+              
                     </div>
 <div class="tps_btn" style="">
   <a href="<{$url}>" style="">跳转支付宝支付</a>
@@ -102,26 +101,27 @@
           
             <notempty name="appid">
             <div class="am-u-md-8 am-u-sm-12 am-u-sm-centered am-margin-vertical am-text-center">
-            <div style="width: 100%;height: 30px;"></div>
-            <div> 
-                <p style="font-size:1.2rem;text-align:center;">支付方式2：</p></div>
-                </div>
+            <div style="width: 100%;height: 20px;"></div>
+            
                
                 <div class="tps_btn" style="">
-                  <a href="javascript:copy('<{$money}>');" style="">复制金额支付</a>
+                  <a href="javascript:copy('<{$money}>');" style="">跳转支付宝输入金额支付</a>
                  
                               </div> 
 
                               <div class="am-u-md-8 am-u-sm-12 am-u-sm-centered am-margin-vertical am-text-center">
-                                <div style="width: 100%;height: 30px;"></div>
-                                <div> 
-                                    <p style="font-size:1.2rem;text-align:center;">支付方式3：截图然后用支付宝扫码支付</p></div>
-                                    </div>
+                                <div style="width: 100%;height: 20px;"></div>
+                              
                                    
                                     <div class="tps_btn" style="">
-                                      <a href="javascript:copy2('<{$money}>');" style="background-color: #555a5f; border: 1px solid #505357;">复制金额</a>
+                                      <a href="javascript:copy2('<{$money}>');" style="">截图后用支付宝扫码支付</a>
                                       <img src="<{$imgurl}>" width="80%"/>
                                                   </div> 
+                                                  <p style="font-size:1.0rem;text-align:center;color: #f00;">
+                                                    温馨提示：跳转后请稍微等待页面加载；<br/>
+                                                如出现错误或支付不成功可返回尝试其他支付方式；<br/>
+                                                如果十分钟不到账，请将付款截图发给客服补单；
+                                                </p>
             </notempty>
             </div>
             
